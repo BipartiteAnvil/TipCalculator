@@ -5,31 +5,30 @@
     android:id="@+id/etTextNumber"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/white"
-    >
+
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tvBaseLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
         android:text="Base"
-        android:textSize="20sp"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/etBaseAmount"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvTipParcent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="52dp"
-        android:textSize="20sp"
+        android:layout_marginTop="32dp"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/sbTip"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvBaseLevel"
         app:layout_constraintTop_toBottomOf="@+id/tvBaseLevel"
         tools:text="20%" />
 
@@ -37,78 +36,94 @@
         android:id="@+id/tvTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginTop="60dp"
         android:text="Tip"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/tvTipAmount"
+        app:layout_constraintEnd_toEndOf="@id/tvBaseLevel"
         app:layout_constraintTop_toBottomOf="@+id/tvTipParcent" />
 
     <TextView
         android:id="@+id/tvTipTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginTop="32dp"
         android:text="Total"
-        android:textSize="20sp"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvTotalAmount"
-        app:layout_constraintTop_toBottomOf="@+id/tvTip"
-        app:layout_constraintVertical_bias="0.0" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/tvBaseLevel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTip" />
 
     <EditText
         android:id="@+id/etBaseAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="12dp"
-        android:textColor="@color/black"
+        android:layout_marginStart="36dp"
         android:ems="8"
         android:hint="Bill Amount"
 
         android:inputType="numberDecimal"
+        android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/tvBaseLevel"
+        app:layout_constraintStart_toEndOf="@+id/tvBaseLevel"
+        app:layout_constraintTop_toTopOf="@id/tvBaseLevel" />
 
     <SeekBar
         android:id="@+id/sbTip"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="32dp"
-        android:textColor="@color/black"
         android:max="30"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBaseAmount" />
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipParcent"
+        app:layout_constraintStart_toStartOf="@+id/etBaseAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvTipParcent" />
 
     <TextView
         android:id="@+id/tvTipAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="176dp"
-        android:textColor="@color/black"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sbTip"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTip"
+        app:layout_constraintStart_toStartOf="@+id/sbTip"
+        app:layout_constraintTop_toTopOf="@+id/tvTip"
         tools:text="19.96" />
 
     <TextView
         android:id="@+id/tvTotalAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="164dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipTotal"
+        app:layout_constraintStart_toStartOf="@+id/tvTipAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvTipTotal"
+        tools:text="103.11" />
+
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Made By Tahsin 🤓!"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/tvTipAmount"
-        app:layout_constraintVertical_bias="0.008"
-        tools:text="103.11" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTipDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/sbTip"
+        app:layout_constraintStart_toStartOf="@+id/sbTip"
+        app:layout_constraintTop_toBottomOf="@+id/sbTip"
+        tools:text="Acceptable" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
