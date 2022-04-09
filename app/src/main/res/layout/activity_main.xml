@@ -5,7 +5,9 @@
     android:id="@+id/etTextNumber"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    >
 
     <TextView
         android:id="@+id/tvBaseLevel"
@@ -15,6 +17,7 @@
         android:layout_marginEnd="52dp"
         android:text="Base"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/etBaseAmount"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,6 +28,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="52dp"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/sbTip"
         app:layout_constraintTop_toBottomOf="@+id/tvBaseLevel"
         tools:text="20%" />
@@ -36,6 +40,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="52dp"
         android:text="Tip"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/tvTipAmount"
         app:layout_constraintTop_toBottomOf="@+id/tvTipParcent" />
@@ -48,6 +53,7 @@
         android:layout_marginEnd="48dp"
         android:text="Total"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tvTotalAmount"
         app:layout_constraintTop_toBottomOf="@+id/tvTip"
@@ -59,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="12dp"
+        android:textColor="@color/black"
         android:ems="8"
         android:hint="Bill Amount"
 
@@ -73,6 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="32dp"
+        android:textColor="@color/black"
         android:max="30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etBaseAmount" />
@@ -83,6 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="176dp"
+        android:textColor="@color/black"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sbTip"
@@ -97,6 +106,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tvTipAmount"
         app:layout_constraintVertical_bias="0.008"
         tools:text="103.11" />
